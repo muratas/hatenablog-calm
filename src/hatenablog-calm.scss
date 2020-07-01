@@ -1,0 +1,9 @@
+@import 'normalize.css';
+@import './variables';
+
+body {
+  background: $black;
+  p {
+    color: white;
+  }
+}
