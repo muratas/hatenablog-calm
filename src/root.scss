@@ -21,7 +21,12 @@
   --lineHeight-default: 1.5;
 
   --borderColor-default: #e5e5e5;
+
+  --container-maxWidth: 1440px;
 }
+
+$viewport-laptop: "screen and (max-width: 1024px)";
+$viewport-tablet: "screen and (max-width: 768px)";
 
 body {
   background: var(--color-white);

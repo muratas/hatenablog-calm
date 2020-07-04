@@ -1,5 +1,7 @@
 #container {
-  margin: var(--margin-xlarge);
+  margin: 0 auto;
+  padding: var(--margin-xlarge);
+  max-width: var(--container-maxWidth);
 }
 
 #blog-title {
@@ -9,6 +11,9 @@
 #content-inner {
   display: flex;
   flex-direction: row-reverse;
+  @media #{$viewport-tablet} {
+    display: block;
+  }
 }
 
 #wrapper {
@@ -18,5 +23,9 @@
 
 #box2 {
   width: 250px;
-  margin: 0 calc(var(--margin-xlarge) + 50px) 0 0;
+  margin: 0 var(--margin-xlarge) 0 0;
+  @media #{$viewport-tablet} {
+    width: 100%;
+    margin: 0;
+  }
 }

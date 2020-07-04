@@ -22,6 +22,8 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
       overflow: hidden;
+      font-feature-settings: "palt";
+      letter-spacing: 0.2em;
     }
     .archive-date,
     .categories {
