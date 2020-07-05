@@ -1,14 +1,16 @@
 :root {
-  --color-black: #000000;
-  --color-gray: #666666;
+  --color-black: #000;
+  --color-gray: #666;
+  --color-lightGray: #aaa;
   --color-light: #ddd;
-  --color-white: #ffffff;
+  --color-white: #fff;
 
   --margin-xlarge: 80px;
   --margin-large: 40px;
   --margin-medium: 20px;
   --margin-small: 10px;
   --margin-xsmall: 5px;
+  --margin-side: 5vw;
 
   --fontSize-heading: 18px;
   --fontSize-bodyText: 16px;

@@ -1,7 +1,7 @@
 #container {
   margin: 0 auto;
-  padding: var(--margin-xlarge);
-  max-width: var(--container-maxWidth);
+  padding: var(--margin-side);
+  // max-width: var(--container-maxWidth);
 }
 
 #blog-title {
@@ -11,19 +11,18 @@
 #content-inner {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   @media #{$viewport-tablet} {
     display: block;
   }
 }
 
 #wrapper {
-  flex: 1;
-  min-width: 0;
+  width: 60vw;
 }
 
 #box2 {
-  width: 250px;
-  margin: 0 var(--margin-xlarge) 0 0;
+  width: 20vw;
   @media #{$viewport-tablet} {
     width: 100%;
     margin: 0;

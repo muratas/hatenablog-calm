@@ -1,40 +1,5 @@
 .entry {
-  .entry-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .entry-date {
-    order: 1;
-  }
-  .entry-title {
-    order: 0;
-    flex: 1;
-    min-width: 0;
-    font-size: var(--fontSize-heading);
-    margin: -2px var(--margin-large) 0 0;
-  }
-  .entry-categories {
-    margin: 0 0 0 var(--margin-medium);
-    order: 1;
-    display: flex;
-    a:not(:last-child) {
-      &::after {
-        content: "・";
-      }
-    }
-  }
-  .customized-header,
-  .social-buttons {
-    order: 2;
-    width: 100%;
-    margin: var(--margin-medium) 0 0;
-  }
-  .entry-content {
-    margin: var(--margin-large) 0 0;
-    font-size: var(--fontSize-bodyText);
-    line-height: var(--lineHeight-bodyText);
-
+  &.mode-markdown .entry-content {
     h1,
     h2,
     h3,
@@ -58,6 +23,67 @@
     h2 {
       font-size: var(--fontSize-heading);
     }
+  }
+  &.mode-hatena .entry-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: var(--fontSize-bodyText);
+      margin: var(--margin-xlarge) 0 0;
+    }
+    h3 {
+      font-size: var(--fontSize-heading);
+      &::before {
+        content: "";
+        display: block;
+        width: 4em;
+        height: 0;
+        margin: 0 0 calc(var(--margin-small) + var(--margin-medium));
+        border-top: 1px solid var(--color-gray);
+      }
+    }
+    h4 {
+      font-size: var(--fontSize-heading);
+    }
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .customized-header,
+    .social-buttons {
+      order: 2;
+      width: 100%;
+      margin: var(--margin-medium) 0 0;
+    }
+  }
+  .entry-date {
+    order: 1;
+  }
+  .entry-title {
+    order: 0;
+    flex: 1;
+    min-width: 0;
+    font-size: var(--fontSize-heading);
+    margin: -2px var(--margin-large) 0 0;
+  }
+  .entry-categories {
+    margin: 0 0 0 var(--margin-medium);
+    order: 1;
+    display: flex;
+    a:not(:last-child) {
+      &::after {
+        content: "・";
+      }
+    }
+  }
+  .entry-content {
+    margin: var(--margin-large) 0 0;
+    font-size: var(--fontSize-bodyText);
+    line-height: var(--lineHeight-bodyText);
 
     & > p {
       margin: var(--margin-medium) 0;
@@ -195,6 +221,9 @@
 
   .entry-footer {
     margin: var(--margin-large) 0 0;
+    .social-buttons {
+      margin: var(--margin-large) 0 0;
+    }
     .entry-footer-section {
       width: 33.333333%;
       float: left;
@@ -268,6 +297,18 @@
       left: 0;
       transform: translateY(-50%);
       margin-top: calc(var(--margin-large) / 2);
+    }
+  }
+  .entry-comment {
+    list-style-type: none;
+    margin: 0 0 var(--margin-large);
+    & > * {
+      & + * {
+        margin: var(--margin-small) 0 0;
+      }
+    }
+    .hatena-id-icon {
+      display: none;
     }
   }
 }

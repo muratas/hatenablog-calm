@@ -1,7 +1,45 @@
 .page-entry {
+  .breadcrumb {
+    margin: 0 0 var(--margin-side);
+    text-align: center;
+  }
   .pager {
     border-top: 1px solid var(--borderColor-default);
     margin: var(--margin-large) 0 0;
     padding: var(--margin-large) 0 0;
+    display: flex;
+  }
+  .pager-arrow {
+    display: none;
+  }
+  .pager-prev,
+  .pager-next {
+    a {
+      display: block;
+      &::before {
+        display: block;
+        font-size: var(--fontSize-small);
+        color: var(--color-lightGray);
+        margin: 0 0 var(--margin-xsmall);
+      }
+    }
+  }
+  .pager-prev {
+    width: 33.333333%;
+    padding: 0 var(--margin-large) 0 0;
+    a {
+      &::before {
+        content: "PREV";
+      }
+    }
+  }
+  .pager-next {
+    flex: 1;
+    min-width: 0;
+    a {
+      &::before {
+        content: "NEXT";
+      }
+    }
   }
 }
