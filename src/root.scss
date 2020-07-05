@@ -7,6 +7,7 @@
 
   --borderColor-default: #e5e5e5;
 
+  --backgroundColor-default: #fafafa;
   --backgroundColor-placeholder: #f0f0f0;
 
   --letterSpacing-default: 0.1em;
@@ -27,8 +28,6 @@
 
   --lineHeight-bodyText: 2;
   --lineHeight-default: 1.5;
-
-  --container-maxWidth: 1440px;
 }
 
 $viewport-laptop: "screen and (max-width: 1024px)";

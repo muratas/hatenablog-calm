@@ -94,5 +94,13 @@ body {
   .services {
     margin: var(--margin-small) 0 0;
     font-size: var(--fontSize-small);
+    color: var(--color-lightGray);
+    a {
+      color: var(--color-black);
+      margin: 0 var(--margin-xsmall) 0 0;
+    }
+    .report-abuse-link {
+      margin: 0 0 0 var(--margin-xsmall);
+    }
   }
 }

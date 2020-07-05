@@ -114,7 +114,8 @@
     & > ol,
     dl,
     blockquote,
-    figure {
+    figure,
+    hr {
       width: 100% / 3 * 2;
       @media #{$viewport-laptop} {
         width: auto;
@@ -160,8 +161,15 @@
 
     hr {
       border: none;
-      border-top: 1px solid var(--borderColor-default);
       margin: var(--margin-large) 0;
+      &::before {
+        content: "";
+        display: block;
+        width: 4em;
+        height: 0;
+        border-top: 1px solid var(--color-gray);
+        margin: 0 auto;
+      }
     }
 
     a {
@@ -173,13 +181,19 @@
       font-style: italic;
     }
 
-    pre.code {
+    pre.code,
+    code {
+      background: var(--backgroundColor-default);
+      letter-spacing: 0.05em;
       border: 1px solid var(--borderColor-default);
+    }
+    pre.code {
       padding: var(--margin-medium)
         calc(var(--margin-medium) + var(--margin-xsmall));
     }
     code {
-      background: none;
+      padding: 0.25em 0.5em;
+      border-radius: 0;
     }
 
     table {
@@ -192,6 +206,10 @@
         border-top: 1px solid var(--borderColor-default);
         border-left: 1px solid var(--borderColor-default);
         padding: var(--margin-medium);
+      }
+      th {
+        font-weight: var(--fontWeight-normal);
+        background: var(--backgroundColor-default);
       }
     }
 

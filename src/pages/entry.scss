@@ -12,6 +12,7 @@
   .pager-next {
     a {
       display: block;
+      @include palt();
       &::before {
         display: block;
         font-size: var(--fontSize-small);
