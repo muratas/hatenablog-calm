@@ -1,0 +1,23 @@
+.page-archive {
+  .archive-heading {
+    font-size: var(--fontSize-default);
+  }
+
+  // 日付アーカイブ
+  &:not(.page-archive-category) {
+    .archive-heading {
+      margin: 0 0 var(--margin-large);
+    }
+  }
+}
+
+.page-archive-category {
+  // カテゴリーアーカイブ
+  .archive-header-category {
+    margin: 0 0 var(--margin-large);
+  }
+  .archive-description {
+    font-size: var(--fontSize-small);
+    margin: var(--margin-small) 0 0;
+  }
+}

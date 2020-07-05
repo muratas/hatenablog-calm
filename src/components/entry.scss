@@ -85,6 +85,9 @@
       }
     }
   }
+  .entry-header-menu {
+    margin: 0 var(--margin-medium) 0 0;
+  }
   .entry-content {
     margin: var(--margin-large) 0 0;
     font-size: var(--fontSize-bodyText);
@@ -227,6 +230,9 @@
   .entry-footer {
     margin: var(--margin-large) 0 0;
     .social-buttons {
+      margin: var(--margin-large) 0 0;
+    }
+    .google-afc-image {
       margin: var(--margin-large) 0 0;
     }
     .entry-footer-section {
