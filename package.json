@@ -8,8 +8,8 @@
     "sass": "^1.22.12"
   },
   "scripts": {
-    "develop": "npx parcel src/hatenablog-calm*.scss",
-    "build": "npx parcel build src/hatenablog-calm*.scss"
+    "develop": "npx parcel src/**/calm.scss",
+    "build": "npx parcel build src/**/calm.scss"
   },
   "browserslist": [
     "defaults"
