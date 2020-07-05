@@ -8,6 +8,7 @@
     h6 {
       font-size: var(--fontSize-bodyText);
       margin: var(--margin-xlarge) 0 0;
+      @include palt();
     }
     h1 {
       font-size: var(--fontSize-heading);
@@ -33,6 +34,7 @@
     h6 {
       font-size: var(--fontSize-bodyText);
       margin: var(--margin-xlarge) 0 0;
+      @include palt();
     }
     h3 {
       font-size: var(--fontSize-heading);
@@ -69,14 +71,17 @@
     min-width: 0;
     font-size: var(--fontSize-heading);
     margin: -2px var(--margin-large) 0 0;
+    @include palt();
   }
   .entry-categories {
     margin: 0 0 0 var(--margin-medium);
     order: 1;
     display: flex;
-    a:not(:last-child) {
-      &::after {
-        content: "・";
+    a {
+      &:not(:last-child) {
+        &::after {
+          content: "・";
+        }
       }
     }
   }
@@ -270,12 +275,8 @@
       vertical-align: top;
     }
     .related-entries-title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-      font-feature-settings: "palt";
-      letter-spacing: 0.2em;
+      @include truncateMultipleLines(2);
+      @include palt();
     }
     .related-entries-entry-body {
       display: none;

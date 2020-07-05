@@ -1,0 +1,18 @@
+.search-form {
+  display: flex;
+  input {
+    padding: var(--margin-small)
+      calc(var(--margin-small) + var(--margin-xsmall));
+    background: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--borderColor-default);
+    line-height: normal;
+  }
+  .search-module-input {
+    flex: 1;
+    min-width: 0;
+  }
+  .search-module-button {
+    border-left: none;
+  }
+}

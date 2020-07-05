@@ -5,6 +5,12 @@
   --color-light: #ddd;
   --color-white: #fff;
 
+  --borderColor-default: #e5e5e5;
+
+  --backgroundColor-placeholder: #f0f0f0;
+
+  --letterSpacing-default: 0.1em;
+
   --margin-xlarge: 80px;
   --margin-large: 40px;
   --margin-medium: 20px;
@@ -22,8 +28,6 @@
   --lineHeight-bodyText: 2;
   --lineHeight-default: 1.5;
 
-  --borderColor-default: #e5e5e5;
-
   --container-maxWidth: 1440px;
 }
 
@@ -33,11 +37,18 @@ $viewport-tablet: "screen and (max-width: 768px)";
 body {
   background: var(--color-white);
   font-size: var(--fontSize-default);
-  letter-spacing: 0.1em;
+  letter-spacing: var(--letterSpacing-default);
   line-height: var(--lineHeight-default);
   cursor: default;
   font-family: "Quicksand", sans-serif;
   font-weight: var(--fontWeight-normal);
+}
+::selection {
+  background: var(--backgroundColor-placeholder);
+}
+::placeholder {
+  color: var(--color-lightGray);
+  letter-spacing: var(--letterSpacing-default);
 }
 
 * {
@@ -60,4 +71,16 @@ h6 {
 a {
   color: var(--color-black);
   text-decoration: none;
+}
+
+@mixin truncateMultipleLines($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+@mixin palt() {
+  font-feature-settings: "palt";
+  letter-spacing: 0.2em;
 }
