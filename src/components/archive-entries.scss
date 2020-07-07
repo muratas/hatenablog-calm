@@ -4,6 +4,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--margin-large);
     align-items: flex-start;
+    @media #{$viewport-tablet} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--margin-mobile);
+    }
+    @media #{$viewport-mobileM} {
+      grid-template-columns: 1fr;
+      gap: var(--margin-mobile);
+    }
   }
   .archive-entry {
     position: relative;

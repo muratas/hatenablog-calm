@@ -1,3 +1,11 @@
+#box2 {
+  @media #{$viewport-laptop} {
+    margin: var(--margin-large) 0 0;
+  }
+  .adx-responsive-mode {
+    margin: 0 0 var(--margin-large);
+  }
+}
 #box2-inner {
   .hatena-module {
     & + .hatena-module {

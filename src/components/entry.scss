@@ -61,6 +61,9 @@
       width: 100%;
       margin: var(--margin-medium) 0 0;
     }
+    & + .ad {
+      margin: var(--margin-large) 0;
+    }
   }
   .entry-date {
     order: 1;

@@ -17,7 +17,9 @@
   --margin-medium: 20px;
   --margin-small: 10px;
   --margin-xsmall: 5px;
+
   --margin-side: 5vw;
+  --margin-mobile: 30px;
 
   --fontSize-heading: 18px;
   --fontSize-bodyText: 16px;
@@ -32,6 +34,8 @@
 
 $viewport-laptop: "screen and (max-width: 1024px)";
 $viewport-tablet: "screen and (max-width: 768px)";
+$viewport-mobileL: "screen and (max-width: 425px)";
+$viewport-mobileM: "screen and (max-width: 375px)";
 
 body {
   background: var(--color-white);

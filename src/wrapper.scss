@@ -2,10 +2,15 @@ body {
   &.header-image-enable {
     #blog-title {
       #blog-title-inner {
-        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        max-width: 1000px;
+        margin: 0 auto;
+        // background-size: cover;
+        // @media #{$viewport-tablet} {
+        //   background-size: initial;
+        // }
       }
       #blog-title-content {
         margin: 0 var(--margin-large) 0 0;
@@ -35,42 +40,50 @@ body {
 }
 
 #container {
+  width: 100%;
   padding: var(--margin-side);
+  @media #{$viewport-tablet} {
+    padding: var(--margin-large);
+  }
+  @media #{$viewport-mobileL} {
+    padding: var(--margin-mobile);
+  }
 }
 
-#blog-title {
-  margin: 0 0 var(--margin-side) !important;
+#container-inner {
+  #footer-ad-rectangle {
+    margin: var(--margin-large) 0 0;
+  }
 }
 
+#blog-title,
 .breadcrumb {
   margin: 0 0 var(--margin-side) !important;
-}
-
-.ad {
-  border-top: 1px solid var(--borderColor-default);
-  border-bottom: 1px solid var(--borderColor-default);
-  padding: var(--margin-medium) 0;
-  margin: 0 0 var(--margin-large);
+  @media #{$viewport-tablet} {
+    margin: 0 0 var(--margin-large) !important;
+  }
 }
 
 #content-inner {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  @media #{$viewport-tablet} {
+  @media #{$viewport-laptop} {
     display: block;
   }
 }
 
 #wrapper {
   width: 60vw;
+  @media #{$viewport-laptop} {
+    width: 100%;
+  }
 }
 
 #box2 {
   width: 20vw;
-  @media #{$viewport-tablet} {
+  @media #{$viewport-laptop} {
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -79,12 +92,22 @@ body {
 }
 
 #footer {
-  padding: var(--margin-side) var(--margin-side) var(--margin-large);
   overflow: hidden;
+  padding: var(--margin-side) var(--margin-side) var(--margin-large);
+  @media #{$viewport-tablet} {
+    padding: var(--margin-large);
+  }
+  @media #{$viewport-mobileL} {
+    padding: var(--margin-mobile);
+  }
 }
 #footer-inner {
   width: 60vw;
   float: right;
+  @media #{$viewport-laptop} {
+    width: 100%;
+    float: none;
+  }
   .footer-address {
     img,
     span {
