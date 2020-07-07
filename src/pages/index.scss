@@ -1,0 +1,13 @@
+.page-index {
+  .entry {
+    & + .entry {
+      margin: var(--margin-xlarge) 0 0;
+      padding: var(--margin-xlarge) 0 0;
+      border-top: 1px solid var(--borderColor-default);
+    }
+  }
+
+  .pager {
+    margin: var(--margin-xlarge) 0 0;
+  }
+}
