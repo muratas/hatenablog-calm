@@ -14,6 +14,10 @@
       @include underlineLinkStyles();
     }
   }
+
+  .pager {
+    margin: var(--margin-xlarge) 0 0;
+  }
 }
 
 .page-archive-category {
