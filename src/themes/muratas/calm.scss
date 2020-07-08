@@ -1,5 +1,37 @@
-@import "../../calm";
+/*!
+ Theme: Calm (muratas)
+ Author: murata_s
+ Description: 穏やかなテーマです
+ Responsive: yes
+ */
 
-body {
-  background: black;
+@import "../../style";
+
+#blog-title {
+  display: none;
+  @media #{$viewport-laptop} {
+    display: block;
+  }
+}
+#box2 {
+  .hatena-module-title {
+    display: none;
+  }
+  .hatena-module-body {
+    margin: 0;
+  }
+}
+#box2-blogTitle {
+  @media #{$viewport-laptop} {
+    display: none;
+  }
+}
+
+#entryFooterMessage {
+  border-top: 1px solid var(--borderColor-default);
+  padding: var(--margin-large) 0 0;
+  margin: var(--margin-large) 0 0;
+  a {
+    @include underlineLinkStyles();
+  }
 }

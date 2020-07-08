@@ -1,10 +1,3 @@
-/*!
- Theme: Calm
- Author: murata_s
- Description: 穏やかなテーマです
- Responsive: yes
- */
-
 @import "normalize.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
@@ -21,3 +14,6 @@
 @import "./pages/entry";
 @import "./pages/archive";
 @import "./pages/index";
+@import "./pages/about";
+
+@import "./utilities";

@@ -7,10 +7,12 @@
 
   --borderColor-default: #e5e5e5;
 
+  --borderColor-link: #bbb;
+
   --backgroundColor-default: #fafafa;
   --backgroundColor-placeholder: #f0f0f0;
 
-  --letterSpacing-default: 0.1em;
+  --letterSpacing-default: 0.05em;
 
   --margin-xlarge: 80px;
   --margin-large: 40px;
@@ -30,6 +32,8 @@
 
   --lineHeight-bodyText: 2;
   --lineHeight-default: 1.5;
+
+  --linkTransition: 100ms linear;
 }
 
 $viewport-laptop: "screen and (max-width: 1024px)";
@@ -45,6 +49,10 @@ body {
   cursor: default;
   font-family: "Quicksand", sans-serif;
   font-weight: var(--fontWeight-normal);
+  text-rendering: optimizelegibility;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 ::selection {
   background: var(--backgroundColor-placeholder);
@@ -86,4 +94,13 @@ a {
 @mixin palt() {
   font-feature-settings: "palt";
   letter-spacing: 0.2em;
+}
+
+@mixin underlineLinkStyles() {
+  padding: 2px 0;
+  border-bottom: 1px solid var(--borderColor-link);
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--color-black);
+  }
 }

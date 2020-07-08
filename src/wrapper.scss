@@ -80,8 +80,10 @@ body {
 }
 
 #box2 {
+  max-width: 300px;
   width: 20vw;
   @media #{$viewport-laptop} {
+    max-width: 100%;
     width: 100%;
   }
 }

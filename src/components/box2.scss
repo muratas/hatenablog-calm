@@ -139,4 +139,22 @@
   .archive-module-month {
     margin: var(--margin-small) 0 0;
   }
+
+  .hatena-module-profile {
+    .profile-activities,
+    .profile-description {
+      margin: var(--margin-small) 0 0;
+    }
+    .icon {
+      margin: 0 0 0 var(--margin-small);
+    }
+    .profile-description {
+      a {
+        @include underlineLinkStyles();
+      }
+    }
+    .hatena-follow-button-box {
+      margin: var(--margin-medium) 0 0;
+    }
+  }
 }

@@ -55,6 +55,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
     .customized-header,
     .social-buttons {
       order: 2;
@@ -95,7 +96,10 @@
     }
   }
   .entry-header-menu {
-    margin: 0 var(--margin-medium) 0 0;
+    margin: 0 0 var(--margin-medium) 0;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
   }
   .entry-content {
     margin: var(--margin-large) 0 0;
@@ -111,6 +115,7 @@
     dl,
     table,
     figure,
+    span[itemtype="http://schema.org/Photograph"],
     .images-row,
     blockquote,
     .hatena-asin-detail,
@@ -147,6 +152,13 @@
       padding: 0 0 0 1.5em;
     }
 
+    dt {
+      font-style: italic;
+    }
+    dd {
+      margin: 0 0 0 1.5em;
+    }
+
     span[itemtype="http://schema.org/Photograph"],
     .images-row {
       width: 100% / 2 * 3;
@@ -158,13 +170,23 @@
     {
       display: block;
     }
+    img {
+      vertical-align: bottom;
+      margin: 0;
+    }
+    figure {
+      span[itemtype="http://schema.org/Photograph"]
+      {
+        margin: 0;
+      }
+    }
     figcaption {
       font-size: var(--fontSize-default);
       line-height: var(--lineHeight-default);
       opacity: 1;
       text-align: left;
       width: 50%;
-      margin: 0 0 0 1.5em;
+      margin: var(--margin-medium) 0 0 1.5em;
       font-style: italic;
     }
 
@@ -182,7 +204,7 @@
     }
 
     a {
-      border-bottom: 1px solid var(--borderColor-default);
+      @include underlineLinkStyles();
     }
 
     blockquote {
@@ -255,7 +277,7 @@
   }
 
   .entry-footer {
-    margin: var(--margin-large) 0 0;
+    margin: var(--margin-xlarge) 0 0;
     .social-buttons {
       margin: var(--margin-large) 0 0;
     }
@@ -316,6 +338,15 @@
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
+      &::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--backgroundColor-placeholder);
+      }
     }
     .related-entries-image-link {
       position: absolute;
