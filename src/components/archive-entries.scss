@@ -2,7 +2,7 @@
   .archive-entries {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--margin-large);
+    gap: 4vw;
     align-items: flex-start;
     @media #{$viewport-tablet} {
       grid-template-columns: repeat(2, 1fr);
