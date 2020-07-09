@@ -33,5 +33,19 @@
   margin: var(--margin-large) 0 0;
   a {
     @include underlineLinkStyles();
+    display: none;
+  }
+}
+
+$categories: "作ったもの", "デザイン", "読書", "日常", "雑記", "お知らせ",
+  "落書き";
+
+@each $category in $categories {
+  body.category-#{$category} {
+    #entryFooterMessage {
+      .category-#{$category} {
+        display: inline;
+      }
+    }
   }
 }
