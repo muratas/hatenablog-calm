@@ -6,15 +6,7 @@ You can install this theme from [the theme store](https://blog.hatena.ne.jp/-/st
 
 ## Classes
 
-You can style the content using the following CSS classes.
-
-#### `button`
-
-Change the link element to look like a button.
-
-```
-<a href="#" class="button">Text</a>
-```
+You can style the content using the following CSS class.
 
 #### `border`
 
