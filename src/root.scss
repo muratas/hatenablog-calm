@@ -28,7 +28,10 @@
   --fontSize-default: 14px;
   --fontSize-small: 11px;
 
+  --fontWeight-bold: 400;
   --fontWeight-normal: 300;
+
+  --fontFamily-default: "Quicksand", sans-serif;
 
   --lineHeight-bodyText: 2;
   --lineHeight-default: 1.5;
@@ -47,7 +50,7 @@ body {
   letter-spacing: var(--letterSpacing-default);
   line-height: var(--lineHeight-default);
   cursor: default;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--fontFamily-default);
   font-weight: var(--fontWeight-normal);
   text-rendering: optimizelegibility;
   word-wrap: break-word;

@@ -237,6 +237,8 @@
       background: var(--backgroundColor-default);
       letter-spacing: 0.05em;
       border: 1px solid var(--borderColor-default);
+      font-family: var(--fontFamily-default);
+      font-weight: var(--fontWeight-bold);
     }
     pre.code {
       padding: var(--margin-medium)
