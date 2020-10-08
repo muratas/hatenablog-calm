@@ -300,22 +300,29 @@
 
   .entry-footer {
     margin: var(--margin-xlarge) 0 0;
-    .social-buttons {
-      margin: var(--margin-large) 0 0;
-    }
-    .google-afc-image {
-      margin: var(--margin-large) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    .entry-tags-wrapper,
+    .social-buttons,
+    .customized-footer,
+    .comment-box {
+      width: 100%;
     }
     .entry-footer-section {
       width: 33.333333%;
-      float: left;
       @media #{$viewport-laptop} {
         width: 25%;
       }
       @media #{$viewport-tablet} {
         width: 100%;
-        float: none;
       }
+    }
+    .social-buttons {
+      margin: var(--margin-large) 0 0;
+    }
+    .google-afc-image {
+      margin: var(--margin-large) 0 0;
+      width: 100% !important;
     }
     .entry-footer-modules {
       margin: var(--margin-large) 0 0;
